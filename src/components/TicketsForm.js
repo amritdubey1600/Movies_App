@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const TicketForm = ({name}) => {
 
     const [uname,setUname] = useState('')
-    const [tnumber,setTnumber] = useState(0)
+    const [tnumber,setTnumber] = useState(1)
     const [time,setTime] = useState('11 AM')
     const [isbooked,setIsbooked] = useState(false)
     const [booking_id,setBooking_id] = useState(0)
@@ -43,12 +43,14 @@ const TicketForm = ({name}) => {
             type="text"
             value={uname}
             onChange={(e)=>setUname(e.target.value)}
+            required
              />
             <label>Qty:</label>
             <input 
             type="number" 
             value={tnumber}
             onChange={(e)=>setTnumber(e.target.value)}
+            required
             />
             <label>Time:</label>
             <select
